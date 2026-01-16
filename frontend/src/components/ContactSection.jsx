@@ -108,7 +108,7 @@ export const ContactSection = () => {
           <div className="h-full min-h-[500px]">
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden h-full">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.5!2d-2.7376!3d34.9488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDU2JzU1LjciTiAywrA0NCcxNS40Ilc!5e0!3m2!1sen!2sma!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3279.1!2d-2.734201!3d34.944358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzTCsDU2JzM5LjciTiAywrA0NCcwMy4xIlc!5e0!3m2!1sen!2sma!4v1234567890"
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: '500px' }}
