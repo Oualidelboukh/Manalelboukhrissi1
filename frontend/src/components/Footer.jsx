@@ -21,8 +21,15 @@ export const Footer = () => {
           {/* About */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-[#c8a882] rounded-xl flex items-center justify-center text-white text-xl">
-                <span>🦷</span>
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#c8a882] to-white rounded-xl blur-sm opacity-50"></div>
+                <div className="relative bg-white rounded-xl p-2 shadow-lg">
+                  <img 
+                    src="https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/uoghbt1k_IMG-20251116-WA0002.jpg"
+                    alt="Cabinet Dentaire"
+                    className="h-10 w-10 object-contain"
+                  />
+                </div>
               </div>
               <div>
                 <h3 className="text-lg font-bold">{clinicInfo.nameAr}</h3>
