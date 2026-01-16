@@ -112,6 +112,44 @@ export const AboutSection = () => {
             </button>
           </div>
         </div>
+
+        {/* Gallery Section */}
+        <div className="mt-20">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-[#1a3a52]/10 rounded-full px-4 py-2 mb-4">
+              <span className="text-sm font-medium text-[#1a3a52]">جولة في عيادتنا</span>
+            </div>
+            <h2 className="heading-1 mb-4">عيادة حديثة ومتطورة</h2>
+            <p className="body-large text-gray-600 max-w-2xl mx-auto">
+              اكتشف بيئة عيادتنا المجهزة بأحدث التقنيات والمعدات الطبية
+            </p>
+          </div>
+
+          {/* Gallery Grid */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {images.gallery.map((image, index) => (
+              <div 
+                key={image.id}
+                className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 fade-in-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img 
+                    src={image.url}
+                    alt={image.title}
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a3a52]/90 via-[#1a3a52]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <h3 className="text-xl font-bold mb-2">{image.title}</h3>
+                    <p className="text-sm text-white/90">{image.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
