@@ -110,10 +110,37 @@ export const testimonials = [
 ];
 
 export const images = {
-  heroDentist: "https://images.pexels.com/photos/35438278/pexels-photo-35438278.jpeg",
-  dentalOffice: "https://images.unsplash.com/photo-1629909613654-28e377c37b09",
-  dentalChair: "https://images.unsplash.com/photo-1643660526741-094639fbe53a",
-  dentalTools: "https://images.unsplash.com/photo-1619988252418-a1e6ee10b122",
-  smile: "https://images.unsplash.com/photo-1573294705900-9623cfc746b7",
-  happyFamily: "https://images.unsplash.com/photo-1588979355313-6711a095465f"
+  // Real clinic photos
+  heroDentist: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/nals597q_IMG-20260116-WA0003.jpg", // الطبيبة في العيادة
+  dentalOffice: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/5k0hc7fm_IMG-20260116-WA0005.jpg", // الاستقبال
+  dentalChair: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/174kxakb_IMG-20260116-WA0002.jpg", // غرفة العلاج
+  dentalXray: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/ouvi8une_IMG-20260116-WA0004.jpg", // جهاز الأشعة
+  
+  // Gallery images
+  gallery: [
+    {
+      id: 1,
+      url: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/5k0hc7fm_IMG-20260116-WA0005.jpg",
+      title: "الاستقبال",
+      description: "استقبال أنيق ومريح"
+    },
+    {
+      id: 2,
+      url: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/nals597q_IMG-20260116-WA0003.jpg",
+      title: "طبيبة الأسنان",
+      description: "الدكتورة منال البوخريصي"
+    },
+    {
+      id: 3,
+      url: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/174kxakb_IMG-20260116-WA0002.jpg",
+      title: "غرفة العلاج",
+      description: "أحدث المعدات الطبية"
+    },
+    {
+      id: 4,
+      url: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/ouvi8une_IMG-20260116-WA0004.jpg",
+      title: "جهاز الأشعة",
+      description: "تقنية تصوير متطورة"
+    }
+  ]
 };
