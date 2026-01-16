@@ -32,6 +32,8 @@ async def create_appointment(appointment_data: AppointmentCreate):
         
         if result.inserted_id:
             logger.info(f"Appointment created: {appointment.id}")
+            # Remove MongoDB _id from response
+            appointment_dict.pop('_id', None)
             return {
                 "success": True,
                 "message": "تم حجز موعدك بنجاح! سنتصل بك قريباً للتأكيد.",
