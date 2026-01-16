@@ -78,11 +78,36 @@ export const AppointmentSection = () => {
     } catch (error) {
       console.error('Error booking appointment:', error);
       
-      // Show specific error message if available
-      const errorMessage = error.response?.data?.detail || 
-                          error.response?.data?.message || 
-                          'حدث خطأ أثناء حجز الموعد. الرجاء المحاولة مرة أخرى.';
-      toast.error(errorMessage);
+      // Handle validation errors from backend
+      if (error.response?.status === 422 && error.response?.data?.detail) {
+        const details = error.response.data.detail;
+        
+        // Check if it's a validation error array
+        if (Array.isArray(details)) {
+          const errorMessages = details.map(err => {
+            if (typeof err === 'object' && err.msg) {
+              return err.msg;
+            }
+            return String(err);
+          }).join(', ');
+          toast.error(errorMessages);
+        } else if (typeof details === 'string') {
+          toast.error(details);
+        } else {
+          toast.error('خطأ في البيانات المدخلة. الرجاء التحقق من جميع الحقول.');
+        }
+      } else {
+        // Show generic error message
+        const errorMessage = error.response?.data?.detail || 
+                            error.response?.data?.message || 
+                            'حدث خطأ أثناء حجز الموعد. الرجاء المحاولة مرة أخرى.';
+        
+        if (typeof errorMessage === 'string') {
+          toast.error(errorMessage);
+        } else {
+          toast.error('حدث خطأ أثناء حجز الموعد. الرجاء المحاولة مرة أخرى.');
+        }
+      }
     } finally {
       setIsSubmitting(false);
     }
