@@ -12,7 +12,8 @@ export const clinicInfo = {
   city: "Zaio",
   cityAr: "زايو",
   hours: {
-    weekdays: "09:00 - 18:00",
+    weekdays: "09:00 - 18:00", // الاثنين - الخميس
+    friday: "09:00 - 17:00",
     saturday: "09:00 - 13:00",
     sunday: "مغلق"
   }
