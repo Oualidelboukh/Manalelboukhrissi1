@@ -69,7 +69,7 @@ export const ContactSection = () => {
                 <h4 className="font-semibold text-gray-900 mb-2">ساعات العمل</h4>
                 <div className="space-y-1 text-sm">
                   <div className="flex justify-between">
-                    <span className="text-gray-600">الأحد - الخميس:</span>
+                    <span className="text-gray-600">الاثنين - الخميس:</span>
                     <span className="text-[#1a3a52] font-semibold">09:00 - 18:00</span>
                   </div>
                   <div className="flex justify-between">
