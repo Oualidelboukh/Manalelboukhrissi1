@@ -262,7 +262,7 @@ export const AppointmentSection = () => {
               </div>
               <div className="space-y-3">
                 <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                  <span className="font-medium text-gray-700">الأحد - الخميس</span>
+                  <span className="font-medium text-gray-700">الاثنين - الخميس</span>
                   <span className="text-[#1a3a52] font-semibold">09:00 - 18:00</span>
                 </div>
                 <div className="flex justify-between items-center py-3 border-b border-gray-100">
