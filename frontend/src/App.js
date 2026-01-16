@@ -1,52 +1,28 @@
-import { useEffect } from "react";
-import "@/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
-
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
-
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
-
-  return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
+import React from "react";
+import "./App.css";
+import { Toaster } from "./components/ui/sonner";
+import { Header } from "./components/Header";
+import { HeroSection } from "./components/HeroSection";
+import { ServicesSection } from "./components/ServicesSection";
+import { AboutSection } from "./components/AboutSection";
+import { AppointmentSection } from "./components/AppointmentSection";
+import { TestimonialsSection } from "./components/TestimonialsSection";
+import { ContactSection } from "./components/ContactSection";
+import { Footer } from "./components/Footer";
+import "./styles/dental-clinic.css";
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+    <div className="App font-arabic" dir="rtl">
+      <Header />
+      <HeroSection />
+      <ServicesSection />
+      <AboutSection />
+      <AppointmentSection />
+      <TestimonialsSection />
+      <ContactSection />
+      <Footer />
+      <Toaster position="top-center" />
     </div>
   );
 }
