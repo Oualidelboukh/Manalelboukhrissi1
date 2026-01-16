@@ -29,11 +29,18 @@ export const Header = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-[#1a3a52] to-[#2d5573] rounded-xl flex items-center justify-center text-white font-bold text-xl">
-              <span>🦷</span>
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#c8a882] to-[#1a3a52] rounded-xl blur-sm opacity-0 group-hover:opacity-75 transition-opacity duration-300"></div>
+              <div className="relative bg-white rounded-xl p-2 shadow-md border-2 border-[#c8a882]/20 group-hover:border-[#c8a882] transition-all duration-300">
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/uoghbt1k_IMG-20251116-WA0002.jpg"
+                  alt="Cabinet Dentaire Dr El Boukhrissi Manal"
+                  className="h-12 w-12 object-contain"
+                />
+              </div>
             </div>
             <div>
-              <h1 className="text-lg font-bold text-[#1a3a52]">{clinicInfo.nameAr}</h1>
+              <h1 className="text-lg font-bold text-[#1a3a52] leading-tight">{clinicInfo.nameAr}</h1>
               <p className="text-xs text-gray-600">{clinicInfo.doctorAr}</p>
             </div>
           </div>
