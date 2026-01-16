@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "./components/ui/sonner";
 import { Header } from "./components/Header";
 import { HeroSection } from "./components/HeroSection";
@@ -9,11 +10,12 @@ import { AppointmentSection } from "./components/AppointmentSection";
 import { TestimonialsSection } from "./components/TestimonialsSection";
 import { ContactSection } from "./components/ContactSection";
 import { Footer } from "./components/Footer";
+import AdminDashboard from "./pages/AdminDashboard";
 import "./styles/dental-clinic.css";
 
-function App() {
+const HomePage = () => {
   return (
-    <div className="App font-arabic" dir="rtl">
+    <>
       <Header />
       <HeroSection />
       <ServicesSection />
@@ -22,6 +24,19 @@ function App() {
       <TestimonialsSection />
       <ContactSection />
       <Footer />
+    </>
+  );
+};
+
+function App() {
+  return (
+    <div className="App font-arabic" dir="rtl">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/admin" element={<AdminDashboard />} />
+        </Routes>
+      </BrowserRouter>
       <Toaster position="top-center" />
     </div>
   );
