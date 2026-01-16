@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import { Calendar, Clock, User, Phone, Mail, MessageSquare } from 'lucide-react';
 import { Button } from './ui/button';
 import { toast } from 'sonner';
+import axios from 'axios';
 import '../styles/dental-clinic.css';
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
 
 export const AppointmentSection = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +18,8 @@ export const AppointmentSection = () => {
     service: '',
     notes: ''
   });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const services = [
     'تقويم الأسنان',
@@ -38,7 +44,7 @@ export const AppointmentSection = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     // Validation
@@ -47,20 +53,39 @@ export const AppointmentSection = () => {
       return;
     }
 
-    // Mock success - in real app this would send to backend
-    console.log('Appointment booking:', formData);
-    toast.success('تم حجز موعدك بنجاح! سنتصل بك قريباً للتأكيد.');
-    
-    // Reset form
-    setFormData({
-      name: '',
-      phone: '',
-      email: '',
-      date: '',
-      time: '',
-      service: '',
-      notes: ''
-    });
+    setIsSubmitting(true);
+
+    try {
+      // Send to backend API
+      const response = await axios.post(`${API}/appointments`, formData);
+      
+      if (response.data.success) {
+        toast.success(response.data.message || 'تم حجز موعدك بنجاح! سنتصل بك قريباً للتأكيد.');
+        
+        // Reset form
+        setFormData({
+          name: '',
+          phone: '',
+          email: '',
+          date: '',
+          time: '',
+          service: '',
+          notes: ''
+        });
+      } else {
+        toast.error('حدث خطأ أثناء حجز الموعد. الرجاء المحاولة مرة أخرى.');
+      }
+    } catch (error) {
+      console.error('Error booking appointment:', error);
+      
+      // Show specific error message if available
+      const errorMessage = error.response?.data?.detail || 
+                          error.response?.data?.message || 
+                          'حدث خطأ أثناء حجز الموعد. الرجاء المحاولة مرة أخرى.';
+      toast.error(errorMessage);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
