@@ -1,5 +1,5 @@
 import React from 'react';
-import { Smile, Activity, Plus, Star, Monitor, Heart, Users, Camera, Sparkles } from 'lucide-react';
+import { Smile, Activity, Plus, Star, Monitor, Heart, Users, Camera, Sparkles, Calendar, ArrowLeft } from 'lucide-react';
 import { services } from '../data/mockData';
 import '../styles/dental-clinic.css';
 
