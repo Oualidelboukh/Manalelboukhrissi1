@@ -125,9 +125,10 @@ export const AboutSection = () => {
             </p>
           </div>
 
-          {/* Gallery Grid */}
-          <div className="grid md:grid-cols-2 gap-6">
-            {images.gallery.map((image, index) => (
+          {/* Gallery Grid - 5 images with special layout */}
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* First row - 3 images */}
+            {images.gallery.slice(0, 3).map((image, index) => (
               <div 
                 key={image.id}
                 className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 fade-in-up"
@@ -148,6 +149,31 @@ export const AboutSection = () => {
                 </div>
               </div>
             ))}
+            
+            {/* Second row - 2 images centered */}
+            <div className="md:col-start-1 md:col-span-3 grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              {images.gallery.slice(3, 5).map((image, index) => (
+                <div 
+                  key={image.id}
+                  className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 fade-in-up"
+                  style={{ animationDelay: `${(index + 3) * 0.1}s` }}
+                >
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img 
+                      src={image.url}
+                      alt={image.title}
+                      className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a3a52]/90 via-[#1a3a52]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                      <h3 className="text-xl font-bold mb-2">{image.title}</h3>
+                      <p className="text-sm text-white/90">{image.description}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
