@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Calendar, Clock, Phone, Mail, User, Filter, Search, ChevronDown, CheckCircle, XCircle, AlertCircle, Trash2, ArrowLeft } from 'lucide-react';
+import { Calendar, Clock, Phone, Mail, User, Filter, Search, ChevronDown, CheckCircle, XCircle, AlertCircle, Trash2, ArrowLeft, LogOut } from 'lucide-react';
 import { toast } from 'sonner';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { isAuthenticated, logout } from '../utils/auth';
 import '../styles/dental-clinic.css';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
