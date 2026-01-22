@@ -39,6 +39,13 @@ export const AdminDashboard = () => {
     completed: 0
   });
 
+  // Check authentication on mount
+  useEffect(() => {
+    if (!isAuthenticated()) {
+      navigate('/admin/login');
+    }
+  }, [navigate]);
+
   useEffect(() => {
     fetchAppointments();
     // eslint-disable-next-line react-hooks/exhaustive-deps
