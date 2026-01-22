@@ -138,13 +138,22 @@ export const AdminDashboard = () => {
               <h1 className="text-3xl font-bold mb-2">لوحة التحكم الإدارية</h1>
               <p className="text-white/80">إدارة مواعيد عيادة طب الأسنان</p>
             </div>
-            <button
-              onClick={() => navigate('/')}
-              className="flex items-center gap-2 bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg transition-colors"
-            >
-              <ArrowLeft className="w-5 h-5" style={{ transform: 'scaleX(-1)' }} />
-              العودة للموقع
-            </button>
+            <div className="flex items-center gap-3">
+              <button
+                onClick={logout}
+                className="flex items-center gap-2 bg-red-500/20 hover:bg-red-500/30 px-4 py-2 rounded-lg transition-colors text-white border border-red-400/30"
+              >
+                <LogOut className="w-5 h-5" />
+                تسجيل الخروج
+              </button>
+              <button
+                onClick={() => navigate('/')}
+                className="flex items-center gap-2 bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg transition-colors"
+              >
+                <ArrowLeft className="w-5 h-5" style={{ transform: 'scaleX(-1)' }} />
+                العودة للموقع
+              </button>
+            </div>
           </div>
         </div>
       </div>
