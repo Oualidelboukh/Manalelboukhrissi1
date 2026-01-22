@@ -12,9 +12,10 @@ export const clinicInfo = {
   city: "Zaio",
   cityAr: "زايو",
   hours: {
-    weekdays: "09:00 - 18:00", // الاثنين - الخميس
-    friday: "09:00 - 17:00",
-    saturday: "09:00 - 13:00",
+    weekdays: "08:30 - 13:00 | 14:30 - 18:00", // الاثنين - الجمعة
+    weekdaysMorning: "08:30 - 13:00",
+    weekdaysEvening: "14:30 - 18:00",
+    saturday: "09:00 - 14:00",
     sunday: "مغلق"
   }
 };
