@@ -278,30 +278,70 @@ export const AppointmentSection = () => {
           {/* Info Side */}
           <div className="space-y-6">
             {/* Working Hours */}
-            <div className="bg-white rounded-2xl shadow-lg p-8">
+            <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-[#c8a882]/20">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-[#1a3a52] rounded-xl flex items-center justify-center">
-                  <Clock className="w-6 h-6 text-white" />
+                <div className="w-14 h-14 bg-gradient-to-br from-[#1a3a52] to-[#2d5573] rounded-xl flex items-center justify-center shadow-md">
+                  <Clock className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="heading-3">ساعات العمل</h3>
+                <div>
+                  <h3 className="heading-3 text-[#1a3a52]">ساعات العمل</h3>
+                  <p className="text-sm text-gray-500">أوقات استقبال المرضى</p>
+                </div>
               </div>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                  <span className="font-medium text-gray-700">الاثنين - الخميس</span>
-                  <span className="text-[#1a3a52] font-semibold">09:00 - 18:00</span>
+              <div className="space-y-4">
+                {/* الاثنين - الجمعة */}
+                <div className="bg-gradient-to-r from-[#1a3a52]/5 to-transparent p-4 rounded-xl border-r-4 border-[#c8a882]">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="font-bold text-gray-800">الاثنين - الجمعة</span>
+                    <span className="text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full font-semibold">مفتوح</span>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-gray-600 flex items-center gap-2">
+                        <span className="w-2 h-2 bg-[#c8a882] rounded-full"></span>
+                        صباحاً
+                      </span>
+                      <span className="text-[#1a3a52] font-bold font-mono">08:30 - 13:00</span>
+                    </div>
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-gray-600 flex items-center gap-2">
+                        <span className="w-2 h-2 bg-[#c8a882] rounded-full"></span>
+                        مساءً
+                      </span>
+                      <span className="text-[#1a3a52] font-bold font-mono">14:30 - 18:00</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                  <span className="font-medium text-gray-700">الجمعة</span>
-                  <span className="text-[#1a3a52] font-semibold">09:00 - 17:00</span>
+                
+                {/* السبت */}
+                <div className="bg-gradient-to-r from-blue-50 to-transparent p-4 rounded-xl border-r-4 border-blue-400">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-bold text-gray-800">السبت</span>
+                    <span className="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-semibold">مفتوح</span>
+                  </div>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-600 flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      دوام واحد
+                    </span>
+                    <span className="text-[#1a3a52] font-bold font-mono">09:00 - 14:00</span>
+                  </div>
                 </div>
-                <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                  <span className="font-medium text-gray-700">السبت</span>
-                  <span className="text-[#1a3a52] font-semibold">09:00 - 13:00</span>
+                
+                {/* الأحد */}
+                <div className="bg-gradient-to-r from-red-50 to-transparent p-4 rounded-xl border-r-4 border-red-400">
+                  <div className="flex items-center justify-between">
+                    <span className="font-bold text-gray-800">الأحد</span>
+                    <span className="text-xs bg-red-100 text-red-700 px-3 py-1 rounded-full font-semibold">مغلق</span>
+                  </div>
                 </div>
-                <div className="flex justify-between items-center py-3">
-                  <span className="font-medium text-gray-700">الأحد</span>
-                  <span className="text-red-500 font-semibold">مغلق</span>
-                </div>
+              </div>
+              
+              {/* Note */}
+              <div className="mt-6 p-4 bg-[#FFF9F2] rounded-lg border border-[#c8a882]/20">
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  <span className="font-semibold text-[#1a3a52]">ملاحظة:</span> يرجى الحجز المسبق لضمان الموعد المناسب لك
+                </p>
               </div>
             </div>
 
