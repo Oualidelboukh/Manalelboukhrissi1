@@ -6,6 +6,7 @@ from motor.motor_asyncio import AsyncIOMotorClient
 import os
 
 from models.appointment import Appointment, AppointmentCreate, AppointmentUpdate
+from utils.email_service import send_appointment_notification
 
 logger = logging.getLogger(__name__)
 
@@ -34,6 +35,15 @@ async def create_appointment(appointment_data: AppointmentCreate):
             logger.info(f"Appointment created: {appointment.id}")
             # Remove MongoDB _id from response
             appointment_dict.pop('_id', None)
+            
+            # Send email notification (async, don't wait for it)
+            try:
+                await send_appointment_notification(appointment_dict)
+                logger.info(f"Email notification sent for appointment: {appointment.id}")
+            except Exception as email_error:
+                logger.error(f"Failed to send email notification: {str(email_error)}")
+                # Don't fail the appointment creation if email fails
+            
             return {
                 "success": True,
                 "message": "تم حجز موعدك بنجاح! سنتصل بك قريباً للتأكيد.",
