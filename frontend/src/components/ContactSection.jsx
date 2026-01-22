@@ -23,40 +23,76 @@ export const ContactSection = () => {
           {/* Contact Info */}
           <div className="space-y-6">
             {/* Address */}
-            <div className="contact-info-item">
-              <div className="contact-icon">
-                <MapPin className="w-6 h-6" />
-              </div>
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-1">العنوان</h4>
-                <p className="text-gray-600">{clinicInfo.addressAr}</p>
-                <p className="text-sm text-gray-500 mt-1">{clinicInfo.address}</p>
+            <div className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-[#c8a882]/30">
+              <div className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-14 h-14 bg-gradient-to-br from-[#1a3a52] to-[#2d5573] rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                      <MapPin className="w-7 h-7 text-white" />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-bold text-gray-900 mb-2 text-lg">العنوان</h4>
+                    <p className="text-gray-700 leading-relaxed mb-2 font-medium">{clinicInfo.addressAr}</p>
+                    <p className="text-sm text-gray-500 italic mb-3">{clinicInfo.address}</p>
+                    <a 
+                      href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(clinicInfo.addressAr)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-[#1a3a52] hover:text-[#c8a882] font-semibold text-sm transition-colors group"
+                    >
+                      <span>افتح في خرائط Google</span>
+                      <ArrowLeft className="w-4 h-4 group-hover:translate-x-1 transition-transform" style={{ transform: 'scaleX(-1)' }} />
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* Phone */}
-            <div className="contact-info-item">
-              <div className="contact-icon">
-                <Phone className="w-6 h-6" />
-              </div>
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-1">رقم الهاتف</h4>
-                <a href={`tel:${clinicInfo.phone}`} className="text-[#1a3a52] font-semibold hover:text-[#c8a882] transition-colors">
-                  {clinicInfo.phone}
-                </a>
+            <div className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-[#c8a882]/30">
+              <div className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                      <Phone className="w-7 h-7 text-white" />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-bold text-gray-900 mb-3 text-lg">رقم الهاتف</h4>
+                    <a 
+                      href={`tel:${clinicInfo.phone.replace(/\s/g, '')}`} 
+                      className="inline-flex items-center gap-3 bg-gradient-to-r from-green-50 to-green-100 hover:from-green-100 hover:to-green-200 px-6 py-3 rounded-xl transition-all group/phone"
+                    >
+                      <span className="text-2xl font-bold text-green-700 tracking-wider">{clinicInfo.phone}</span>
+                      <span className="text-sm text-green-600 opacity-0 group-hover/phone:opacity-100 transition-opacity">اضغط للاتصال</span>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* Email */}
-            <div className="contact-info-item">
-              <div className="contact-icon">
-                <Mail className="w-6 h-6" />
-              </div>
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-1">البريد الإلكتروني</h4>
-                <a href={`mailto:${clinicInfo.email}`} className="text-[#1a3a52] hover:text-[#c8a882] transition-colors break-all">
-                  {clinicInfo.email}
-                </a>
+            <div className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-[#c8a882]/30">
+              <div className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                      <Mail className="w-7 h-7 text-white" />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-bold text-gray-900 mb-3 text-lg">البريد الإلكتروني</h4>
+                    <a 
+                      href={`mailto:${clinicInfo.email}`} 
+                      className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-50 to-blue-100 hover:from-blue-100 hover:to-blue-200 px-5 py-3 rounded-xl transition-all group/email break-all"
+                    >
+                      <Mail className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                      <span className="text-blue-700 font-semibold">{clinicInfo.email}</span>
+                    </a>
+                    <p className="text-sm text-gray-500 mt-2">نجيب على استفساراتكم خلال 24 ساعة</p>
+                  </div>
+                </div>
               </div>
             </div>
 
