@@ -10,8 +10,9 @@ from typing import List
 import uuid
 from datetime import datetime, timezone
 
-# Import appointment routes
+# Import routes
 from routes.appointments import router as appointments_router
+from routes.admin_auth import router as admin_auth_router
 
 
 ROOT_DIR = Path(__file__).parent
