@@ -111,9 +111,9 @@ export const testimonials = [
 
 export const images = {
   // Real clinic photos - Updated with new professional images
-  heroDentist: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/nals597q_IMG-20260116-WA0003.jpg", // الطبيبة في العيادة (نحتفظ بها)
-  dentalOffice: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/tmwx0142_IMG-20260122-WA0013.jpg", // الاستقبال الجديد
-  dentalChair: "https://customer-assets.emergentagant.com/job_premium-dentalclinic/artifacts/9sk5q4a9_IMG-20260122-WA0005.jpg", // غرفة العلاج
+  heroDentist: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/tmwx0142_IMG-20260122-WA0013.jpg", // مكتب الاستقبال مع الشعار - صورة Hero الجديدة
+  dentalOffice: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/s10i1ufd_IMG-20260122-WA0016.jpg", // منطقة الانتظار
+  dentalChair: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/9sk5q4a9_IMG-20260122-WA0005.jpg", // غرفة العلاج
   dentalXray: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/ak79tzt9_IMG-20260122-WA0018.jpg", // غرفة الأشعة
   
   // Gallery images - Updated with new photos
