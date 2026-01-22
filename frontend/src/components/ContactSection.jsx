@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, ArrowLeft } from 'lucide-react';
 import { clinicInfo } from '../data/mockData';
 import '../styles/dental-clinic.css';
 
