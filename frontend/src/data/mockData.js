@@ -110,37 +110,43 @@ export const testimonials = [
 ];
 
 export const images = {
-  // Real clinic photos
-  heroDentist: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/nals597q_IMG-20260116-WA0003.jpg", // الطبيبة في العيادة
-  dentalOffice: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/5k0hc7fm_IMG-20260116-WA0005.jpg", // الاستقبال
-  dentalChair: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/174kxakb_IMG-20260116-WA0002.jpg", // غرفة العلاج
-  dentalXray: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/ouvi8une_IMG-20260116-WA0004.jpg", // جهاز الأشعة
+  // Real clinic photos - Updated with new professional images
+  heroDentist: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/nals597q_IMG-20260116-WA0003.jpg", // الطبيبة في العيادة (نحتفظ بها)
+  dentalOffice: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/tmwx0142_IMG-20260122-WA0013.jpg", // الاستقبال الجديد
+  dentalChair: "https://customer-assets.emergentagant.com/job_premium-dentalclinic/artifacts/9sk5q4a9_IMG-20260122-WA0005.jpg", // غرفة العلاج
+  dentalXray: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/ak79tzt9_IMG-20260122-WA0018.jpg", // غرفة الأشعة
   
-  // Gallery images
+  // Gallery images - Updated with new photos
   gallery: [
     {
       id: 1,
-      url: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/5k0hc7fm_IMG-20260116-WA0005.jpg",
-      title: "الاستقبال",
-      description: "استقبال أنيق ومريح"
+      url: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/tmwx0142_IMG-20260122-WA0013.jpg",
+      title: "مكتب الاستقبال",
+      description: "استقبال أنيق ومريح مع شعار العيادة"
     },
     {
       id: 2,
-      url: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/nals597q_IMG-20260116-WA0003.jpg",
-      title: "طبيبة الأسنان",
-      description: "الدكتورة منال البوخريصي"
+      url: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/s10i1ufd_IMG-20260122-WA0016.jpg",
+      title: "منطقة الانتظار",
+      description: "مساحة مريحة للمرضى"
     },
     {
       id: 3,
-      url: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/174kxakb_IMG-20260116-WA0002.jpg",
+      url: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/9sk5q4a9_IMG-20260122-WA0005.jpg",
       title: "غرفة العلاج",
-      description: "أحدث المعدات الطبية"
+      description: "أحدث المعدات الطبية والتقنيات"
     },
     {
       id: 4,
-      url: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/ouvi8une_IMG-20260116-WA0004.jpg",
-      title: "جهاز الأشعة",
-      description: "تقنية تصوير متطورة"
+      url: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/ak79tzt9_IMG-20260122-WA0018.jpg",
+      title: "غرفة الأشعة",
+      description: "تقنية تصوير متطورة للتشخيص الدقيق"
+    },
+    {
+      id: 5,
+      url: "https://customer-assets.emergentagent.com/job_premium-dentalclinic/artifacts/ldl54q2v_IMG-20260122-WA0020.jpg",
+      title: "شعار العيادة",
+      description: "DR ELBOUKHRISSI MANAL - Cabinet Dentaire"
     }
   ]
 };
