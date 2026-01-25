@@ -65,6 +65,15 @@ export const Header = () => {
               <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-[#1a3a52] transition-colors font-medium">
                 اتصل بنا
               </button>
+              
+              {/* Admin Login Button */}
+              <button 
+                onClick={() => navigate('/admin/login')}
+                className="flex items-center gap-2 bg-[#1a3a52] hover:bg-[#2d5573] text-white px-4 py-2 rounded-lg transition-all transform hover:scale-105 font-medium"
+              >
+                <Lock className="w-4 h-4" />
+                دخول المستخدم
+              </button>
             </nav>
 
             {/* Contact Info - Desktop */}
