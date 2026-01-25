@@ -121,18 +121,6 @@ export const Header = () => {
           )}
         </div>
       </header>
-
-      {/* Floating Admin Button */}
-      <button
-        onClick={() => navigate('/admin/login')}
-        className="fixed bottom-6 left-6 z-50 w-14 h-14 bg-gradient-to-br from-[#1a3a52] to-[#2d5573] hover:from-[#2d5573] hover:to-[#1a3a52] text-white rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center group"
-        title="دخول الإدارة"
-      >
-        <Lock className="w-6 h-6 group-hover:rotate-12 transition-transform" />
-        <span className="absolute -top-2 -right-2 bg-[#c8a882] text-white text-xs px-2 py-0.5 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
-          Admin
-        </span>
-      </button>
     </>
   );
 };
