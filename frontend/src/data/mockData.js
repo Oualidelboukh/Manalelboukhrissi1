@@ -6,7 +6,7 @@ export const clinicInfo = {
   doctor: "Dr El Boukhrissi Manal",
   doctorAr: "الدكتورة البوخريصي منال",
   phone: "05 36 33 93 55",
-  email: "drmanaleiboukhrissi@gmail.com",
+  email: "drmanalelboukhrissi@gmail.com",
   address: "Bd Barsouvie N17, Hay souk, Zaio, 1ère étage",
   addressAr: "شارع بارسوفيه رقم 17 حي السوق زايو، الطابق الأول",
   city: "Zaio",
