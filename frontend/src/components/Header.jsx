@@ -49,7 +49,7 @@ export const Header = () => {
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-8">
+            <nav className="hidden md:flex items-center gap-6">
               <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-[#1a3a52] transition-colors font-medium">
                 الرئيسية
               </button>
@@ -66,23 +66,16 @@ export const Header = () => {
                 اتصل بنا
               </button>
               
-              {/* Admin Login Button */}
+              {/* Admin Login Button - Always Visible */}
               <button 
                 onClick={() => navigate('/admin/login')}
-                className="flex items-center gap-2 bg-[#1a3a52] hover:bg-[#2d5573] text-white px-4 py-2 rounded-lg transition-all transform hover:scale-105 font-medium"
+                data-testid="admin-login-btn"
+                className="flex items-center gap-2 bg-[#1a3a52] hover:bg-[#2d5573] text-white px-4 py-2 rounded-lg transition-all transform hover:scale-105 font-medium shadow-md"
               >
                 <Lock className="w-4 h-4" />
                 دخول المستخدم
               </button>
             </nav>
-
-            {/* Contact Info - Desktop */}
-            <div className="hidden lg:flex items-center gap-4">
-              <a href={`tel:${clinicInfo.phone}`} className="flex items-center gap-2 text-[#1a3a52] hover:text-[#c8a882] transition-colors">
-                <Phone className="w-4 h-4" />
-                <span className="text-sm font-medium">{clinicInfo.phone}</span>
-              </a>
-            </div>
 
             {/* Mobile Menu Button */}
             <button
@@ -116,6 +109,18 @@ export const Header = () => {
                   <span className="text-sm font-medium">{clinicInfo.phone}</span>
                   <Phone className="w-4 h-4" />
                 </a>
+                {/* Admin Login Button - Mobile */}
+                <button 
+                  onClick={() => {
+                    navigate('/admin/login');
+                    setIsMobileMenuOpen(false);
+                  }}
+                  data-testid="admin-login-btn-mobile"
+                  className="flex items-center justify-center gap-2 bg-[#1a3a52] hover:bg-[#2d5573] text-white px-4 py-3 rounded-lg transition-all font-medium mt-2"
+                >
+                  <Lock className="w-4 h-4" />
+                  دخول المستخدم
+                </button>
               </nav>
             </div>
           )}
