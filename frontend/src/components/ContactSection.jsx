@@ -146,7 +146,7 @@ export const ContactSection = () => {
                   className="flex items-center justify-center gap-3 w-full bg-[#c8a882] hover:bg-[#a98d6b] text-white px-6 py-3 rounded-full font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
                 >
                   <Phone className="w-6 h-6" />
-                  اتصل بالمكتب
+                  WhatsApp
                   <span className="text-lg font-bold">{clinicInfo.phone}</span>
                 </a>
                 
