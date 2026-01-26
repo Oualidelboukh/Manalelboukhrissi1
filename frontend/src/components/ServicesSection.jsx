@@ -17,8 +17,8 @@ const iconMap = {
 
 export const ServicesSection = () => {
   return (
-    <section id="services" className="py-16 sm:py-24 bg-gradient-to-br from-[#FFF9F2] via-white to-[#FFF9F2]" dir="rtl">
-      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+    <section id="services" className="py-16 sm:py-24 bg-gradient-to-br from-[#FFF9F2] via-white to-[#FFF9F2] w-full" dir="rtl">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 bg-[#1a3a52]/10 rounded-full px-5 py-2.5 mb-6 border border-[#1a3a52]/10">
