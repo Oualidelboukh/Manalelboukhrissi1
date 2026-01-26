@@ -14,8 +14,8 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#1a3a52] text-white pt-16 pb-8" dir="rtl">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-[#1a3a52] text-white pt-16 pb-8 w-full" dir="rtl">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* About */}

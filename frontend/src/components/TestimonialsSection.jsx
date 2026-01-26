@@ -5,8 +5,8 @@ import '../styles/dental-clinic.css';
 
 export const TestimonialsSection = () => {
   return (
-    <section id="testimonials" className="py-20 bg-white" dir="rtl">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="testimonials" className="py-16 sm:py-20 bg-white w-full" dir="rtl">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-[#1a3a52]/10 rounded-full px-4 py-2 mb-4">
