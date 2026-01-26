@@ -5,8 +5,8 @@ import '../styles/dental-clinic.css';
 
 export const ContactSection = () => {
   return (
-    <section id="contact" className="py-20 bg-[#FFF9F2]" dir="rtl">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-16 sm:py-20 bg-[#FFF9F2] w-full" dir="rtl">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-[#1a3a52]/10 rounded-full px-4 py-2 mb-4">
