@@ -212,6 +212,8 @@
 /* Hero Section */
 .hero-clinic {
   min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
   background: linear-gradient(
     135deg,
     var(--clinic-navy) 0%,
@@ -220,6 +222,8 @@
   );
   position: relative;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .hero-overlay {
