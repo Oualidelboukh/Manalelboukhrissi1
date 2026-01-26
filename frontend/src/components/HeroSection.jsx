@@ -58,10 +58,10 @@ export const HeroSection = () => {
             </div>
             
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col gap-3 w-full max-w-md">
               <button 
                 onClick={scrollToAppointment}
-                className="flex items-center justify-center gap-3 bg-[#c8a882] hover:bg-[#b89872] text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl transition-all transform hover:scale-105"
+                className="flex items-center justify-center gap-3 bg-[#c8a882] hover:bg-[#b89872] text-white px-6 py-4 rounded-full font-bold text-lg shadow-xl transition-all transform hover:scale-105 w-full"
               >
                 <Calendar className="w-5 h-5" />
                 احجز موعدك الآن
@@ -70,7 +70,7 @@ export const HeroSection = () => {
               
               <a 
                 href={`tel:${clinicInfo.phone}`}
-                className="flex items-center justify-center gap-3 bg-white/20 hover:bg-white border-2 border-white text-white hover:text-[#1a3a52] px-6 py-4 rounded-full font-bold text-lg backdrop-blur-md transition-all"
+                className="flex items-center justify-center gap-3 bg-white/20 hover:bg-white border-2 border-white text-white hover:text-[#1a3a52] px-6 py-4 rounded-full font-bold text-lg backdrop-blur-md transition-all w-full"
               >
                 <Phone className="w-5 h-5" />
                 {clinicInfo.phone}
