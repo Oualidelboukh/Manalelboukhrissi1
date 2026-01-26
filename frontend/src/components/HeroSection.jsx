@@ -12,10 +12,10 @@ export const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="hero-clinic" dir="rtl">
+    <section id="home" className="hero-clinic w-full overflow-x-hidden" dir="rtl">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center w-full"
         style={{
           backgroundImage: `url(${images.heroDentist})`,
           backgroundPosition: 'center'
@@ -23,10 +23,10 @@ export const HeroSection = () => {
       />
       
       {/* Dark Overlay for better text visibility */}
-      <div className="absolute inset-0 bg-gradient-to-l from-[#1a3a52]/95 via-[#1a3a52]/85 to-[#1a3a52]/70" />
+      <div className="absolute inset-0 bg-gradient-to-l from-[#1a3a52]/95 via-[#1a3a52]/85 to-[#1a3a52]/70 w-full" />
       
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 min-h-screen flex items-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 min-h-screen flex items-center">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center w-full">
           {/* Text Content */}
           <div className="text-white pt-24 md:pt-20 fade-in-up">
