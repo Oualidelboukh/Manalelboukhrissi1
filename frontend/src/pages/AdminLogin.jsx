@@ -24,11 +24,14 @@ export const AdminLogin = () => {
     try {
       const response = await axios.post(`${API}/admin/login`, formData);
       
-      if (response.data.success) {
-        // Save token
-        localStorage.setItem('adminToken', response.data.token);
-        toast.success('تم تسجيل الدخول بنجاح!');
-        navigate('/admin/dashboard');
+      try {
+  const response = await axios.post(`${API}/admin/login`, formData);
+      
+  if (response.data.access) {
+    toast.success('تم تسجيل الدخول بنجاح!');
+    navigate('/admin/dashboard');
+  }
+      }
       }
     } catch (error) {
       console.error('Login error:', error);
